@@ -32,6 +32,7 @@
 # count = set(list_1)
 
 # print(len(count))
+
 '''/////////'''
 # numbers = [1, 1, 2, 0, -1, 3, 4, 4] # type = list
 # numbers = list()
@@ -47,8 +48,10 @@
 # amount = int(input("Enter am....: "))
 # for _ in range(amount):
 
+'''//////'''
 
-
+# input = [1, 1, 2, 0, -1, 3, 4, 4]
+# print('Уникальных:', len(set(input)))
 
 
 
@@ -62,18 +65,29 @@
 # Примечание: Список словарей задан изначально.
 # Пользователь его не вводит
 
-user_input = [
-    {'V': 'S001'}, {'V': 'S002'}, {'VI': 'S001'}, 
-    {'VI': 'S005'}, {'VII': 'S005'}, {'V': 'S009'}, 
-    {'VIII': 'S007'}  
-]
 
-my_set = set()
-for dictionary in user_input:
-    for value in dictionary.values():
-        my_set.add(value)
+# lst_obj = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"},
+#            {"VII": "S005"}, {"V": "S009"}, {" VIII": "S007"}]
+
+# set_obj = set()
+# for dict_el in lst_obj:
+#     for val in dict_el.values():
+#         set_obj.add(val)
+
+# print(set_obj)
+
+# user_input = [
+#     {'V': 'S001'}, {'V': 'S002'}, {'VI': 'S001'}, 
+#     {'VI': 'S005'}, {'VII': 'S005'}, {'V': 'S009'}, 
+#     {'VIII': 'S007'}  
+# ]
+
+# my_set = set()
+# for dictionary in user_input:
+#     for value in dictionary.values():
+#         my_set.add(value)
     
-print(my_set)
+# print(my_set)    #  или print(set())
 
 
 '''//////////////////'''
@@ -85,15 +99,16 @@ print(my_set)
 # Input: [0, -1, 5, 2, 3]
 # Output: 2 (-1 < 5, 2 < 3)
 
-# numbers = [0, -1, 5, 2, 3]
+#numbers = [0, -1, 5, 2, 3]
 
-# amount = int(input("Enter amount of number you want to insert: "))
-# numbers = list()
-# for _ in range(amount):
-#     numbers.append(int(input("Enter a number: ")))
-# count = 0
-# for i in range(1, len(numbers)):
-#     if numbers[i - 1] < numbers[i]:
-#         count += 1
+amount = int(input("Enter amount of number you want to insert: "))
+numbers = list()
+for _ in range(amount):
+    numbers.append(int(input("Enter a number: ")))
+count = 0
+for i in range(1, len(numbers)):
+    if numbers[i - 1] < numbers[i]:
+        count += 1
 
-# print(f"{numbers}, amount of numbers: {count}")
+print(f"{numbers}, amount of numbers: {count}")
+
